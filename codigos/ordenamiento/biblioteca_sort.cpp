@@ -10,7 +10,7 @@ int main(){
 
     std::vector<int> vector_numeros;
 
-    std::ifstream archivo ("../../dataset/data_desordenado_7.txt");
+    std::ifstream archivo ("../../dataset/data_semiordenado_8.txt");
 
     if (!archivo.is_open()){
 
@@ -37,10 +37,6 @@ int main(){
     std::chrono::duration<double> duracion = fin - inicio;
 
 
-    for (size_t i = 0; i < vector_numeros.size(); i ++){
-
-        std::cout << vector_numeros[i] << std::endl;
-    }
 
     std::cout << "Tiempo de bubble sort con " << cantidad_datos << " elementos: \t" << duracion.count() << std::endl;
     return 0;

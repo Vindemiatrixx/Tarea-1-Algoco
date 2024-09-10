@@ -24,3 +24,87 @@ bubble con 50.000 elementos: 12.2289 s
 bubble con 100.000 elemetos: 48.3791 s 
 bubble con 150.000 elementos: 117.411 s
 bubble con 250.000 elementos: 319.238 s
+
+---------------------------------------------------------------------
+
+#########
+DESORDENADO
+#########
+bibliote con 100 elementos: 0.000011412 s
+biblio con 1.000 elementos: 0.000144 s
+biblio con 2.500 elementos: 0.000398819 s
+biblio con 5.000 elementos: 0.000854637 s
+biblio con 10.000 elementos: 0.00189925 s
+biblio con 50.000 elementos: 0.0106022 s 
+biblio con 100.000 elementos: 0.022344 s
+biblio con 150.000 elementos: 0.035062 s 
+biblio con 250.000 elementos: 0.0601562 s
+
+#########
+SEMIORDENADO
+#########
+bibliote con 100 elementos: 0.000009388 s
+biblio con 1.000 elementos: 0.000129368 s
+biblio con 2.500 elementos: 0.000345414 s 
+biblio con 5.000 elementos: 0.000726876 s
+biblio con 10.000 elementos: 0.00167195 s
+biblio con 50.000 elementos: 0.00910852 s
+biblio con 100.000 elementos: 0.0211745 s
+biblio con 150.000 elementos: 0.0314167 s 
+biblio con 250.000 elementos: 0.0600381 s
+
+---------------------------------------------------------------------
+
+#########
+DESORDENADO
+#########
+merge_sort con 100 elementos: 0.000115267 s
+merge_sort con 1.000 elementos: 0.000438853
+merge_sort con 2.500 elementos: 0.00110081 s
+merge_sort con 5.000 elementos: 0.00223391 s
+merge_sort con 10.000 elementos: 0.00487538 s
+merge_sort con 50.000 elementos: 0.0249312 s
+merge_sort con 100.000 elementos: 0.0528497 s
+merge_sort con 150.000 elementos: 0.0763378 s
+merge_sort con 250.000 elementos: 0.12959 s
+
+#########
+SEMIORDENADO
+#########
+merge_sort con 100 elementos: 0.000113486
+merge_sort con 1.000 elementos: 0.000427633
+merge_sort con 2.500 elementos: 0.00107113
+merge_sort con 5.000 elementos: 0.00221082
+merge_sort con 10.000 elementos: 0.0047981
+merge_sort con 50.000 elementos: 0.0236868
+merge_sort con 100.000 elementos: 0.0481204
+merge_sort con 150.000 elementos: 0.0733148
+merge_sort con 250.000 elementos: 0.122068
+
+---------------------------------------------------------------------
+
+#########
+DESORDENADO
+#########
+quick_sort con 100 elementos: 0.000008386
+quick_sort con 1.000 elementos: 0.000116551
+quick_sort con 2.500 elementos: 0.00033139
+quick_sort con 5.000 elementos: 0.000742143
+quick_sort con 10.000 elementos: 0.0017755
+quick_sort con 50.000 elementos: 0.00940389
+quick_sort con 100.000 elementos: 0.0200152
+quick_sort con 150.000 elementos: 0.0279004
+quick_sort con 250.000 elementos: 0.0483838
+
+#########
+SEMIORDENADO
+#########
+quick_sort con 100 elementos: 0.000008646
+quick_sort con 1.000 elementos: 0.00011579
+quick_sort con 2.500 elementos: 0.000412225
+quick_sort con 5.000 elementos: 0.000700574
+quick_sort con 10.000 elementos: 0.00168542
+quick_sort con 50.000 elementos: 0.00851039
+quick_sort con 100.000 elementos: 0.0175044
+quick_sort con 150.000 elementos: 0.0334711
+quick_sort con 250.000 elementos: 0.0535878

@@ -55,13 +55,7 @@ int main(){
     auto fin = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<double> duracion = fin - inicio;
-
-
-    for (size_t i = 0; i < vector_numeros.size(); i ++){
-
-        std::cout << vector_numeros[i] << std::endl;
-    }
-
+    
     std::cout << "Tiempo de bubble sort con " << cantidad_datos << " elementos: \t" << duracion.count() << std::endl;
     return 0;
 }
