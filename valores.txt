@@ -1,0 +1,4 @@
+bubble con 50.000 elementos: 10.3328 s
+bubble con 100.000 elemetos: 41.0851 s
+bubble con 150.000 elementos: 93.6009 s
+bubble con 250.000 elementos: 265.182 s

@@ -80,39 +80,68 @@ def crear_archivo_semidesordenado():
             for valores in lista_datos:
                 
                 archivo.write(str(valores)+"\n")
-    
+
+def generar_matriz(n, min = 0, max = 500):
+    return [[random.randint(min, max) for _ in range(n)] for _ in range(n)]
+
 def crear_matrix_cuadrada():
     
     nombre_str_archivo = "matrix_misma_dimension_"
     extension_txt = ".txt"
     
-    tamannos_matrix = [10, 100, 500, 1000, 5000, 10000, 15000, 20000]
+    tamannos_matrix = [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
     
-    #TERMINAR DE CREAR MATRICES DE N*N
+    numero = 500
     
-    for i in range(10):
-
-        valor_i = str(i)
+    for i, tamanno in enumerate(tamannos_matrix):
         
-        nombre_archivo = "../dataset/"+nombre_str_archivo+valor_i+extension_txt
+        valor_i = str(i)
+        nombre_archivo = "../dataset/" + nombre_str_archivo + valor_i + extension_txt
+        
+        matriz1 = generar_matriz(tamanno, 0, numero)
+        matriz2 = generar_matriz(tamanno, 0, numero)
+        
         with open(nombre_archivo, "w") as archivo:
+            archivo.write(str(tamanno)+"\n")
             
-            print("a")
+            for fila in matriz1:
+                archivo.write(" ".join(map(str, fila)) + "\n")
+            
+            archivo.write("-\n")
+            
+            for fila in matriz2:
+                archivo.write(" ".join(map(str, fila)) + "\n")
 
 def crear_matrix_NO_cuadrada():
     
     nombre_str_archivo = "matrix_no_misma_dimension_"
     extension_txt = ".txt"
     
-    for i in range(10):
+    posibles_tamanos = [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
+    numero = 500  # Límite superior para los números aleatorios
 
+    for i in range(10):
         valor_i = str(i)
+        nombre_archivo = "../dataset/" + nombre_str_archivo + valor_i + extension_txt
         
-        nombre_archivo = "../dataset/"+nombre_str_archivo+valor_i+extension_txt
+        # Seleccionar dos tamaños aleatorios para las matrices
+        tamanno1 = random.choice(posibles_tamanos)
+        tamanno2 = random.choice(posibles_tamanos)
+        
+        # Generar las dos matrices de tamaños diferentes
+        matriz1 = generar_matriz(tamanno1, 0, numero)
+        matriz2 = generar_matriz(tamanno2, 0, numero)
+        
         with open(nombre_archivo, "w") as archivo:
+            archivo.write(f"{tamanno1}x{tamanno1}\n")
+            for fila in matriz1:
+                archivo.write(" ".join(map(str, fila)) + "\n")
             
-            print("a")
-    
-crear_archivo_desordenado()
-crear_archivo_semidesordenado()
-crear_archivo_semiordenado()
+            archivo.write("-\n")
+            
+            archivo.write(f"{tamanno2}x{tamanno2}\n")
+            for fila in matriz2:
+                archivo.write(" ".join(map(str, fila)) + "\n")
+
+crear_matrix_NO_cuadrada()
+crear_matrix_cuadrada()
