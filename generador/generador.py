@@ -1,12 +1,11 @@
-import threading
 import random
 
 def crear_archivo_semiordenado():
 
-    nombre_str_archivo = "data_ordenado_"
+    nombre_str_archivo = "data_semiordenado_"
     extension_txt = ".txt"
     
-    datos_list = [100, 1000, 2500, 5000, 10000, 50000, 100000, 150000, 250000, 500000]
+    datos_list = [100, 1000, 2500, 5000, 10000, 50000, 100000, 150000, 250000]
     
     for i in range(len(datos_list)):
 
@@ -35,7 +34,7 @@ def crear_archivo_desordenado():
     nombre_str_archivo = "data_desordenado_"
     extension_txt = ".txt"
     
-    datos_list = [100, 1000, 2500, 5000, 10000, 50000, 100000, 150000, 250000, 500000]
+    datos_list = [100, 1000, 2500, 5000, 10000, 50000, 100000, 150000, 250000]
     
     for i in range(len(datos_list)):
 
@@ -143,5 +142,5 @@ def crear_matrix_NO_cuadrada():
             for fila in matriz2:
                 archivo.write(" ".join(map(str, fila)) + "\n")
 
-crear_matrix_NO_cuadrada()
-crear_matrix_cuadrada()
+crear_archivo_desordenado()
+crear_archivo_semiordenado()

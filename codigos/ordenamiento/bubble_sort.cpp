@@ -30,7 +30,7 @@ int main(){
 
     std::vector<int> vector_numeros;
 
-    std::ifstream archivo ("../../dataset/data_ordenado_9.txt");
+    std::ifstream archivo ("../../dataset/data_semiordenado_5.txt");
 
     if (!archivo.is_open()){
 
