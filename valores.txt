@@ -1,3 +1,6 @@
+#########
+SEMIORDENADO
+#########
 bubble con 100 elementos: 0.000103896 s
 bubble con 1.000 elementos: 0.00363366 s
 bubble con 2.500 elementos: 0.0237745 s
@@ -7,3 +10,17 @@ bubble con 50.000 elementos: 10.3328 s
 bubble con 100.000 elemetos: 41.0851 s
 bubble con 150.000 elementos: 93.6009 s
 bubble con 250.000 elementos: 265.182 s
+
+
+#########
+DESORDENADO
+#########
+bubble con 100 elementos: 0.000120556 s
+bubble con 1.000 elementos: 0.00432282 s
+bubble con 2.500 elementos: 0.0281823 s
+bubble con 5.000 elementos: 0.114537 s 
+bubble con 10.000 elementos: 0.466794 s 
+bubble con 50.000 elementos: 12.2289 s 
+bubble con 100.000 elemetos: 48.3791 s 
+bubble con 150.000 elementos: 117.411 s
+bubble con 250.000 elementos: 319.238 s
