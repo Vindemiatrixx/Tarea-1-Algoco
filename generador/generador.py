@@ -83,9 +83,9 @@ def crear_archivo_semidesordenado():
 def generar_matriz(n, min = 0, max = 500):
     return [[random.randint(min, max) for _ in range(n)] for _ in range(n)]
 
-def crear_matrix_cuadrada():
+def crear_matrix_cuadrada_Strassen():
     
-    nombre_str_archivo = "matrix_misma_dimension_"
+    nombre_str_archivo = "matrix_Strassen"
     extension_txt = ".txt"
     
     tamannos_matrix = [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
@@ -95,10 +95,9 @@ def crear_matrix_cuadrada():
     for i, tamanno in enumerate(tamannos_matrix):
         
         valor_i = str(i)
-        nombre_archivo = "../dataset/" + nombre_str_archivo + valor_i + extension_txt
+        nombre_archivo = "../dataset/matrix/" + nombre_str_archivo + valor_i + extension_txt
         
         matriz1 = generar_matriz(tamanno, 0, numero)
-        matriz2 = generar_matriz(tamanno, 0, numero)
         
         with open(nombre_archivo, "w") as archivo:
             archivo.write(str(tamanno)+"\n")
@@ -106,9 +105,27 @@ def crear_matrix_cuadrada():
             for fila in matriz1:
                 archivo.write(" ".join(map(str, fila)) + "\n")
             
-            archivo.write("-\n")
+                
+def crear_matrix_cuadrada():
+    
+    nombre_str_archivo = "matrix_misma_dimension"
+    extension_txt = ".txt"
+    
+    tamannos_matrix = [10,100,500,1000,1500]
+    
+    numero = 500
+    
+    for i, tamanno in enumerate(tamannos_matrix):
+        
+        valor_i = str(i)
+        nombre_archivo = "../dataset/matrix/" + nombre_str_archivo + valor_i + extension_txt
+        
+        matriz1 = generar_matriz(tamanno, 0, numero)
+        
+        with open(nombre_archivo, "w") as archivo:
+            archivo.write(str(tamanno)+"\n")
             
-            for fila in matriz2:
+            for fila in matriz1:
                 archivo.write(" ".join(map(str, fila)) + "\n")
 
 def crear_matrix_NO_cuadrada():
@@ -116,31 +133,23 @@ def crear_matrix_NO_cuadrada():
     nombre_str_archivo = "matrix_no_misma_dimension_"
     extension_txt = ".txt"
     
-    posibles_tamanos = [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
-    numero = 500  # Límite superior para los números aleatorios
+    tamannos_matrix = [10,100,500,1000,1500]
+    numero = 500
 
-    for i in range(10):
+    for i in range(len(tamannos_matrix)):
+        
         valor_i = str(i)
-        nombre_archivo = "../dataset/" + nombre_str_archivo + valor_i + extension_txt
+        nombre_archivo = "../dataset/matrix/" + nombre_str_archivo + valor_i + extension_txt
         
-        # Seleccionar dos tamaños aleatorios para las matrices
-        tamanno1 = random.choice(posibles_tamanos)
-        tamanno2 = random.choice(posibles_tamanos)
+        tamanno1 = random.choice(tamannos_matrix)
         
-        # Generar las dos matrices de tamaños diferentes
         matriz1 = generar_matriz(tamanno1, 0, numero)
-        matriz2 = generar_matriz(tamanno2, 0, numero)
         
         with open(nombre_archivo, "w") as archivo:
             archivo.write(f"{tamanno1}x{tamanno1}\n")
             for fila in matriz1:
                 archivo.write(" ".join(map(str, fila)) + "\n")
-            
-            archivo.write("-\n")
-            
-            archivo.write(f"{tamanno2}x{tamanno2}\n")
-            for fila in matriz2:
-                archivo.write(" ".join(map(str, fila)) + "\n")
 
-crear_archivo_desordenado()
-crear_archivo_semiordenado()
+
+crear_matrix_NO_cuadrada()
+

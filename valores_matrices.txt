@@ -1,0 +1,27 @@
+##########
+MISMO TAMAÑO
+##########
+
+cubico de 10x10 elementos: 0.000009247
+cubico de 100x100 elementos: 0.00819416
+cubico de 500x500 elementos: 1.03197
+cubico de 1000x1000 elementos: 8.71469
+cubico de 1500x1500 elementos: 29.9971
+
+
+cubico optimizado de 10x10 elementos: 0.000008647
+cubico optimizado de 100x100 elementos: 0.00740811
+cubico optimizado de 500x500 elementos: 1.02811
+cubico optimizado de 1000x1000 elementos: 8.66733
+cubico optimizado de 1500x1500 elementos: 29.1158
+
+strassen 2 elementos: 0.000007905
+strassen 4 elementos: 0.000061197
+strassen 8 elementos: 0.00036794
+strassen 16 elementos: 0.00256969
+strassen 32 elementos: 0.0178452
+strassen 64 elementos: 0.12322
+strassen 128 elementos: 0.868998
+strassen 256 elementos: 6.17224
+strassen 512 elementos: 42.6959
+strassen 1024 elementos: 298.347
